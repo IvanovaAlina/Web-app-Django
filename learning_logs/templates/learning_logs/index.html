@@ -1,0 +1,13 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="dicplay-3">Обучение</h1>
+
+        <p class="lead">Этот проект создан в качестве начального. Возможно, он будет раширяться и улучшаться.</p>
+        {% if not user.is_authenticated %}
+            <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}">Регистрация &raquo;</a>
+        {% endif %}
+    </div>
+{% endblock page_header %}
+
